@@ -165,3 +165,5 @@ inputField.addEventListener('keyup', (e) => {
         changeBtn.click()
     }
 })
+
+inputField.focus()
