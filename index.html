@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Weather App</title>
+        <link
+            rel="shortcut icon"
+            href="https://openweathermap.org/themes/openweathermap/assets/vendor/owm/img/icons/favicon.ico"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            crossorigin="anonymous"
+        />
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/js/bootstrap.bundle.min.js"
+            crossorigin="anonymous"
+        ></script>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body class="bg-dark">
+        <section
+            class="container d-flex align-items-center justify-content-center"
+        >
+            <div class="left shadow px-4 pt-4 pb-3 text-light">
+                <div class="h-25 d-flex flex-column">
+                    <span id="day" class="fw-bold h1">Tuesday</span>
+                    <span id="date" class="h5 ps-1">15 Jan 2019</span>
+                    <span id="locationData" class="h5 ps-1">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <span id="location">Paris, FR</span>
+                    </span>
+                </div>
+                <div id="weatherBottom" class="h-75 d-flex flex-column">
+                    <i id="weatherIcon" class="bi bi-sun mt-auto"></i>
+                    <span id="temp" class="fw-bold"
+                        ><span id="tempValue">29</span>&deg;<span id="tempUnit"
+                            >C</span
+                        ></span
+                    >
+                    <span id="weatherType" class="fw-bold h4 ps-1">Sunny</span>
+                </div>
+            </div>
+            <div class="right shadow d-flex flex-column text-light px-4">
+                <div class="someData d-flex flex-column gap-2">
+                    <span class="fw-bold mt-auto"
+                        >MIN. TEMP
+                        <span class="float-end me-3 grey"
+                            ><span id="min">10</span> &deg;<span id="minTempUnit"
+                                >C</span
+                            ></span
+                        ></span
+                    >
+                    <span class="fw-bold mt-auto"
+                        >MAX. TEMP
+                        <span class="float-end me-3 grey"
+                            ><span id="max">22 </span> &deg;<span id="maxTempUnit"
+                                >C</span
+                            ></span
+                        ></span
+                    >
+                    <span class="fw-bold mt-auto"
+                        >PRESSURE
+                        <span class="float-end me-3 grey"
+                            ><span id="pressure">1020</span>
+                            <span>hPa</span></span
+                        ></span
+                    >
+                    <span class="fw-bold mt-auto"
+                        >HUMIDITY
+                        <span class="float-end me-3 grey"
+                            ><span id="humidity">34</span> <span>%</span></span
+                        ></span
+                    >
+                    <span class="fw-bold mt-auto"
+                        >WIND
+                        <span class="float-end me-3 grey"
+                            ><span id="wind">5</span> <span>km/h</span></span
+                        ></span
+                    >
+                </div>
+                <!-- <div class="bg-danger h-100 rounded-3 my-1 otherDayForecast mb-3">Hello</div> -->
+                <input
+                    id="locationVal"
+                    type="text"
+                    placeholder="Search location eg. Paris"
+                    value=""
+                    class="
+                        form-control
+                        mt-auto
+                        mb-3
+                        bg-dark
+                        text-light
+                        border-dark
+                    "
+                />
+                <button
+                    id="changeLocation"
+                    class="btn btn-primary w-100 shadow"
+                >
+                    <i class="bi bi-geo-alt"></i> Change Location
+                </button>
+            </div>
+        </section>
+        <script src="./main.js"></script>
+    </body>
+</html>
