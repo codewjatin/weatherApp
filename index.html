@@ -28,17 +28,17 @@
         <section
             class="container d-flex align-items-center justify-content-center"
         >
-            <div class="left shadow px-4 pt-4 pb-3 text-light">
+            <div id="leftBody" class="left shadow px-4 pt-4 pb-3 text-light">
                 <div class="h-25 d-flex flex-column">
                     <span id="day" class="fw-bold h1">Tuesday</span>
-                    <span id="date" class="h5 ps-1">15 Jan 2019</span>
+                    <span id="date" class="h5 ps-1">10 Feb 2020</span>
                     <span id="locationData" class="h5 ps-1">
                         <i class="bi bi-geo-alt-fill"></i>
-                        <span id="location">Paris, FR</span>
+                        <span id="location">Tokyo, FR</span>
                     </span>
                 </div>
                 <div id="weatherBottom" class="h-75 d-flex flex-column">
-                    <i id="weatherIcon" class="bi bi-sun mt-auto"></i>
+                    <i id="weatherIcon" class="mt-auto bi bi-sun"></i>
                     <span id="temp" class="fw-bold"
                         ><span id="tempValue">29</span>&deg;<span id="tempUnit"
                             >C</span
@@ -87,7 +87,6 @@
                         ></span
                     >
                 </div>
-                <!-- <div class="bg-danger h-100 rounded-3 my-1 otherDayForecast mb-3">Hello</div> -->
                 <input
                     id="locationVal"
                     type="text"
@@ -103,6 +102,7 @@
                     "
                 />
                 <button
+                    type="submit"
                     id="changeLocation"
                     class="btn btn-primary w-100 shadow"
                 >
