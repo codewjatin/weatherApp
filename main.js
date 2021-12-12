@@ -56,8 +56,9 @@ async function setData(location) {
     if (weatherData.cod === 200) {
         const date = new Date()
         day.textContent = days[date.getDay()]
-        dateData.textContent = `${date.getDate()} ${months[date.getMonth() - 1]
-            } ${date.getFullYear()}`
+        dateData.textContent = `${date.getDate()} ${
+            months[date.getMonth() - 1]
+        } ${date.getFullYear()}`
         locationName.textContent = `${weatherData.name}, ${weatherData.sys.country}`
         temp.textContent = Math.floor(weatherData.main.temp)
         tempUnit.textContent = unit === 'metric' ? 'C' : 'F'
@@ -77,7 +78,8 @@ async function setData(location) {
                 break
             case '01n':
                 weatherIcon.classList.add('bi-moon')
-                leftBody.style.backgroundImage = 'url(./img/clear_sky_night.jpg)'
+                leftBody.style.backgroundImage =
+                    'url(./img/clear_sky_night.jpg)'
                 break
             case '02d':
                 weatherIcon.classList.add('bi-cloud-sun')
@@ -121,11 +123,13 @@ async function setData(location) {
                 break
             case '11d':
                 weatherIcon.classList.add('bi-cloud-lightning')
-                leftBody.style.backgroundImage = 'url(./img/cloud-lightning.jpg)'
+                leftBody.style.backgroundImage =
+                    'url(./img/cloud-lightning.jpg)'
                 break
             case '11n':
                 weatherIcon.classList.add('bi-cloud-lightning')
-                leftBody.style.backgroundImage = 'url(./img/cloud-lightning.jpg)'
+                leftBody.style.backgroundImage =
+                    'url(./img/cloud-lightning.jpg)'
                 break
             case '13d':
                 weatherIcon.classList.add('bi-snow2')
@@ -153,5 +157,11 @@ changeBtn.addEventListener('click', () => {
     if (inputField.value.trim()) {
         setData(inputField.value.trim())
         inputField.value = null
+    }
+})
+
+inputField.addEventListener('keyup', (e) => {
+    if (e.key === 'Enter') {
+        changeBtn.click()
     }
 })
