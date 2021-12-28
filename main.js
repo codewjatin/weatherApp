@@ -57,7 +57,7 @@ async function setData(location) {
         const date = new Date()
         day.textContent = days[date.getDay()]
         dateData.textContent = `${date.getDate()} ${
-            months[date.getMonth() - 1]
+            months[date.getMonth()]
         } ${date.getFullYear()}`
         locationName.textContent = `${weatherData.name}, ${weatherData.sys.country}`
         temp.textContent = Math.floor(weatherData.main.temp)
